@@ -44,6 +44,7 @@ const SignUp = () => {
       navigate('/simulator');
     } catch (error) {
       console.error("Error signing up:", error);
+      alert("Invalid email or password");
     }
   };
 

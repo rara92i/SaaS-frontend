@@ -17,6 +17,8 @@ const Login = () => {
       navigate('/simulator');
     } catch (error) {
       console.error("Error logging in:", error);
+      alert("Invalid email or password");
+     
     }
   };
 
