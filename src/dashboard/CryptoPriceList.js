@@ -146,7 +146,7 @@ const CryptoPriceList = () => {
       <Grid container spacing={2}>
         {allCryptoPairs.map(pair => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={pair}>
-            <Card style={{ backgroundColor: "#191919"}}>
+            <Card style={{ backgroundColor: "#2a2d34"}}>
               <CardContent className="flex justify-between items-center">
                 <Typography variant="h6" color="white">{pair.toUpperCase()}</Typography>
                 <Box display="flex" alignItems="center">

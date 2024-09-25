@@ -325,7 +325,15 @@ function TradingBoard() {
                     Current Balance: ${balance.toFixed(2)}
                 </Typography>
                 <Box mt={4} style={{ height: 400, width: '100%' }}>
-                    <DataGrid rows={trades} columns={columns} pageSize={10} rowsPerPageOptions={[10]} />
+                    <DataGrid rows={trades} columns={columns} pageSize={10} rowsPerPageOptions={[10]} 
+                       slotProps={{
+                        columnMenu: {
+                            sx: {
+                                backgroundColor: '#333', // Couleur de fond du menu
+                                color: '#fff',            // Couleur du texte
+                            }
+                        }
+                    }}/>
                 </Box>
                 <Box mt={2}>
                     <Button variant="contained" color="secondary">

@@ -4,7 +4,7 @@ import { FaBitcoin} from 'react-icons/fa'
 
 const Dominance = ({ value }) => {
   return (
-    <Card style={{ backgroundColor: "#191919"}} >
+    <Card style={{ backgroundColor: "#2a2d34"}} >
       <CardContent>
         <Typography color={("white")} variant="h6" component="div">
           Dominance

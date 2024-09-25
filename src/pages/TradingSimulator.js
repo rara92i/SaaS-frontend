@@ -275,7 +275,15 @@ function TradingSimulator() {
                             />
                         </Box>
                         <Box mt={-5}  style={{ height: 400, width: '100%' }}>
-                            <DataGrid rows={tradesData} columns={columns} pageSize={10} rowsPerPageOptions={[10]} getRowId={(row) => row.id} />
+                            <DataGrid rows={tradesData} columns={columns} pageSize={10} rowsPerPageOptions={[10]} getRowId={(row) => row.id} 
+                                   slotProps={{
+                                    columnMenu: {
+                                        sx: {
+                                            backgroundColor: '#333', // Couleur de fond du menu
+                                            color: '#fff',            // Couleur du texte
+                                        }
+                                    }
+                                }}/>
                         </Box>
                         {tradesData.length > 0 && (
     <Box mt={4}>

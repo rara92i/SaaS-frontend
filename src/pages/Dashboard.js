@@ -48,9 +48,9 @@ const Dashboard = () => {
           volume: `${(totalVolume / 1e9).toFixed(2)} B$`,
           volumeChange: `${btcData.usd_24h_change.toFixed(2)}%`,
           dominance: `${((btcMarketCap / totalMarketCap) * 100).toFixed(2)}%`,
-          btcPrice: `$${btcData.usd.toFixed(2)}`,
+          btcPrice: `${btcData.usd.toFixed(2)}`,
           btcPriceChange: `${btcData.usd_24h_change.toFixed(2)}%`,
-          ethPrice: `$${ethData.usd.toFixed(2)}`,
+          ethPrice: `${ethData.usd.toFixed(2)}`,
           ethPriceChange: `${ethData.usd_24h_change.toFixed(2)}%`,
           totalMarketCap: `${(totalMarketCap / 1e12).toFixed(2)} T$`,
           totalMarketCapChange: `${totalMarketCapChange.toFixed(2)}%`,
@@ -78,18 +78,18 @@ const Dashboard = () => {
         <Dominance  value={marketData.dominance} />
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
-        <Paper  elevation={3} style={{ padding: '20px', textAlign: 'left', backgroundColor: '#191919' }}>
+        <Paper  elevation={3} style={{ padding: '20px', textAlign: 'left', backgroundColor: '#2a2d34' }}>
           <Typography variant="h6" color="white">BTC</Typography>
-          <Typography variant="h4" color="primary">{marketData.btcPrice}</Typography>
+          <Typography variant="h4" color="neutral">{marketData.btcPrice}<span style={{ color: 'white'}}>$</span></Typography>
           <Typography variant="body1" color={parseFloat(marketData.btcPriceChange) >= 0 ? "green" : "red"}>
             {marketData.btcPriceChange}
           </Typography>
         </Paper>
       </Grid>
       <Grid item xs={12} sm={6} md={3}>
-        <Paper elevation={3} style={{ padding: '20px', textAlign: 'left', backgroundColor: '#191919' }}>
+        <Paper elevation={3} style={{ padding: '20px', textAlign: 'left', backgroundColor: '#2a2d34' }}>
           <Typography variant="h6" color="white">ETH</Typography>
-          <Typography variant="h4" color="secondary">{marketData.ethPrice}</Typography>
+          <Typography variant="h4" color="neutral">{marketData.ethPrice}<span style={{ color: 'white'}}>$</span></Typography>
           <Typography variant="body1" color={parseFloat(marketData.ethPriceChange) >= 0 ? "green" : "red"}>
             {marketData.ethPriceChange}
           </Typography>
@@ -103,3 +103,5 @@ const Dashboard = () => {
 }
 
 export default Dashboard;
+
+

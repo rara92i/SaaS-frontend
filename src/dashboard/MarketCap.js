@@ -3,7 +3,7 @@ import { Card, CardContent, Typography } from '@mui/material';
 
 const MarketCap = ({ value, change }) => {
   return (
-    <Card style={{ backgroundColor: "#191919"}}>
+    <Card style={{ backgroundColor: "#2a2d34"}}>
       <CardContent>
         <Typography color={("white")} variant="h6" component="div">
           Market Cap BTC

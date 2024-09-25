@@ -3,7 +3,7 @@ import { Card, CardContent, Typography } from "@mui/material";
 
 const volume = ({ value, change }) => {
   return (
-    <Card  style={{ backgroundColor: "#191919"}}>
+    <Card  style={{ backgroundColor: "#2a2d34"}}>
       <CardContent>
         <Typography color={("white")} variant="h5" component="div">
           Volume

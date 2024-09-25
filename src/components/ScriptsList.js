@@ -48,7 +48,7 @@ const ScriptList = () => {
     <Box>
       {scripts.map((script) => (
         <Card key={script.id} sx={{ marginBottom: 2 }}>
-          <CardContent style={{backgroundColor: '#191919'}}>
+          <CardContent style={{backgroundColor: '#2a2d34'}}>
             <Typography color={'white'} variant="h6">{script.title}</Typography>
             <Typography color={'white'} variant="body2">{script.description}</Typography>
             <Button onClick={() => handleExpandClick(script.id)}>
