@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Card, Typography, CardContent, Select, MenuItem, FormControl, InputLabel } from '@mui/material';
 
 export default function OpenInterest() {
-  const [symbol, setSymbol] = useState('ETHUSDT');
+  const [symbol, setSymbol] = useState('BTCUSDT');
   const [openInterest, setOpenInterest] = useState(null);
   const [longPercentage, setLongPercentage] = useState(null);
   const [shortPercentage, setShortPercentage] = useState(null);
-  const [period, setPeriod] = useState('1h');
+  const [period, setPeriod] = useState('4h');
 
 
   async function getOpenInterest(symbol) {
@@ -67,10 +67,10 @@ export default function OpenInterest() {
     <MenuItem style={{ color: 'black' }} value="1d">Daily</MenuItem>
   </Select>
 </FormControl>
-      <Card className="p-4 flex flex-col justify-center items-center">
+      <Card style={{ backgroundColor: "#2a2d34"}} className="p-4 flex flex-col justify-center items-center">
         <CardContent>
-          <Typography style={{color: 'black'}} variant="h6">Symbol: {symbol}</Typography>
-          <Typography style={{color: 'black'}} variant="body1">Open Interest: {openInterest !== null ? openInterest : 'Loading...'}</Typography>
+          <Typography style={{color: 'white'}} variant="h6">Symbol: {symbol}</Typography>
+          <Typography style={{color: 'white'}} variant="body1">Open Interest: {openInterest !== null ? openInterest : 'Loading...'}</Typography>
           <Typography variant="body1" style={{ color: longPercentage > 50 ? 'green' : 'red' }}>
             Long: {longPercentage !== null ? `${longPercentage}%` : 'Loading...'}
           </Typography>
